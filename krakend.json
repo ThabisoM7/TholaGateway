@@ -1,0 +1,102 @@
+{
+  "version": 3,
+  "port": 8080,
+  "extra_config": {
+    "security/cors": {
+      "allow_origins": ["*"],
+      "allow_methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+      "allow_headers": ["Origin", "Authorization", "Content-Type", "Accept"],
+      "max_age": "12h"
+    },
+    "security/secure-headers": {
+      "hsts": true,
+      "hsts_max_age": 31536000,
+      "x_frame_options": "DENY",
+      "x_xss_protection": true,
+      "x_content_type_options": true
+    }
+  },
+  "endpoints": [
+    {
+      "endpoint": "/auth/{path}",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "extra_config": {
+        "qos/ratelimit/router": {
+          "max_rate": 20,
+          "client_max_rate": 5,
+          "strategy": "ip"
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/auth/{path}",
+          "encoding": "no-op",
+          "host": ["https://thola-devbuild-production.up.railway.app"]
+        }
+      ]
+    },
+    {
+      "endpoint": "/{resource}",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "extra_config": {
+        "qos/ratelimit/router": {
+          "max_rate": 500,
+          "client_max_rate": 50,
+          "strategy": "ip"
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/{resource}",
+          "encoding": "no-op",
+          "host": ["https://thola-devbuild-production.up.railway.app"]
+        }
+      ]
+    },
+    {
+      "endpoint": "/{resource}",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "extra_config": {
+        "qos/ratelimit/router": {
+          "max_rate": 200,
+          "client_max_rate": 20,
+          "strategy": "ip"
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/{resource}",
+          "encoding": "no-op",
+          "host": ["https://thola-devbuild-production.up.railway.app"]
+        }
+      ]
+    },
+    {
+      "endpoint": "/{resource}/{id}",
+      "method": "PUT",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/{resource}/{id}",
+          "encoding": "no-op",
+          "host": ["https://thola-devbuild-production.up.railway.app"]
+        }
+      ]
+    },
+    {
+      "endpoint": "/{resource}/{id}",
+      "method": "DELETE",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/{resource}/{id}",
+          "encoding": "no-op",
+          "host": ["https://thola-devbuild-production.up.railway.app"]
+        }
+      ]
+    }
+  ]
+}
