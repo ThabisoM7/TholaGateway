@@ -34,6 +34,11 @@
     {
       "endpoint": "/auth/{path}",
       "method": "POST",
+      "input_headers": [
+        "Authorization",
+        "Content-Type",
+        "Accept"
+      ],
       "output_encoding": "no-op",
       "extra_config": {
         "qos/ratelimit/router": {
@@ -55,6 +60,11 @@
     {
       "endpoint": "/{resource}",
       "method": "GET",
+      "input_headers": [
+        "Authorization",
+        "Content-Type",
+        "Accept"
+      ],
       "output_encoding": "no-op",
       "extra_config": {
         "qos/ratelimit/router": {
@@ -76,6 +86,11 @@
     {
       "endpoint": "/{resource}",
       "method": "POST",
+      "input_headers": [
+        "Authorization",
+        "Content-Type",
+        "Accept"
+      ],
       "output_encoding": "no-op",
       "extra_config": {
         "qos/ratelimit/router": {
@@ -97,6 +112,11 @@
     {
       "endpoint": "/{resource}/{p1}",
       "method": "GET",
+      "input_headers": [
+        "Authorization",
+        "Content-Type",
+        "Accept"
+      ],
       "output_encoding": "no-op",
       "backend": [
         {
@@ -111,6 +131,11 @@
     {
       "endpoint": "/{resource}/{p1}",
       "method": "POST",
+      "input_headers": [
+        "Authorization",
+        "Content-Type",
+        "Accept"
+      ],
       "output_encoding": "no-op",
       "backend": [
         {
@@ -125,6 +150,11 @@
     {
       "endpoint": "/{resource}/{p1}",
       "method": "PUT",
+      "input_headers": [
+        "Authorization",
+        "Content-Type",
+        "Accept"
+      ],
       "output_encoding": "no-op",
       "backend": [
         {
@@ -139,6 +169,11 @@
     {
       "endpoint": "/{resource}/{p1}",
       "method": "DELETE",
+      "input_headers": [
+        "Authorization",
+        "Content-Type",
+        "Accept"
+      ],
       "output_encoding": "no-op",
       "backend": [
         {
@@ -153,6 +188,11 @@
     {
       "endpoint": "/{resource}/{p1}/{p2}",
       "method": "GET",
+      "input_headers": [
+        "Authorization",
+        "Content-Type",
+        "Accept"
+      ],
       "output_encoding": "no-op",
       "backend": [
         {
@@ -167,6 +207,11 @@
     {
       "endpoint": "/{resource}/{p1}/{p2}",
       "method": "POST",
+      "input_headers": [
+        "Authorization",
+        "Content-Type",
+        "Accept"
+      ],
       "output_encoding": "no-op",
       "backend": [
         {
@@ -181,6 +226,11 @@
     {
       "endpoint": "/{resource}/{p1}/{p2}",
       "method": "PUT",
+      "input_headers": [
+        "Authorization",
+        "Content-Type",
+        "Accept"
+      ],
       "output_encoding": "no-op",
       "backend": [
         {
@@ -195,6 +245,11 @@
     {
       "endpoint": "/{resource}/{p1}/{p2}",
       "method": "DELETE",
+      "input_headers": [
+        "Authorization",
+        "Content-Type",
+        "Accept"
+      ],
       "output_encoding": "no-op",
       "backend": [
         {
@@ -209,6 +264,11 @@
     {
       "endpoint": "/{resource}/{p1}/{p2}/{p3}",
       "method": "GET",
+      "input_headers": [
+        "Authorization",
+        "Content-Type",
+        "Accept"
+      ],
       "output_encoding": "no-op",
       "backend": [
         {
@@ -223,6 +283,11 @@
     {
       "endpoint": "/{resource}/{p1}/{p2}/{p3}",
       "method": "POST",
+      "input_headers": [
+        "Authorization",
+        "Content-Type",
+        "Accept"
+      ],
       "output_encoding": "no-op",
       "backend": [
         {
@@ -237,6 +302,11 @@
     {
       "endpoint": "/{resource}/{p1}/{p2}/{p3}",
       "method": "PUT",
+      "input_headers": [
+        "Authorization",
+        "Content-Type",
+        "Accept"
+      ],
       "output_encoding": "no-op",
       "backend": [
         {
@@ -251,6 +321,11 @@
     {
       "endpoint": "/{resource}/{p1}/{p2}/{p3}",
       "method": "DELETE",
+      "input_headers": [
+        "Authorization",
+        "Content-Type",
+        "Accept"
+      ],
       "output_encoding": "no-op",
       "backend": [
         {
