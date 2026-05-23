@@ -3,9 +3,23 @@
   "port": 8080,
   "extra_config": {
     "security/cors": {
-      "allow_origins": ["*"],
-      "allow_methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-      "allow_headers": ["Origin", "Authorization", "Content-Type", "Accept"],
+      "allow_origins": [
+        "*"
+      ],
+      "allow_methods": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE",
+        "PATCH",
+        "OPTIONS"
+      ],
+      "allow_headers": [
+        "Origin",
+        "Authorization",
+        "Content-Type",
+        "Accept"
+      ],
       "max_age": "12h"
     },
     "security/secure-headers": {
@@ -32,7 +46,9 @@
         {
           "url_pattern": "/auth/{path}",
           "encoding": "no-op",
-          "host": ["https://thola-devbuild-production.up.railway.app"]
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
         }
       ]
     },
@@ -51,7 +67,9 @@
         {
           "url_pattern": "/{resource}",
           "encoding": "no-op",
-          "host": ["https://thola-devbuild-production.up.railway.app"]
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
         }
       ]
     },
@@ -70,7 +88,9 @@
         {
           "url_pattern": "/{resource}",
           "encoding": "no-op",
-          "host": ["https://thola-devbuild-production.up.railway.app"]
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
         }
       ]
     },
@@ -82,7 +102,9 @@
         {
           "url_pattern": "/{resource}/{id}",
           "encoding": "no-op",
-          "host": ["https://thola-devbuild-production.up.railway.app"]
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
         }
       ]
     },
@@ -94,7 +116,457 @@
         {
           "url_pattern": "/{resource}/{id}",
           "encoding": "no-op",
-          "host": ["https://thola-devbuild-production.up.railway.app"]
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/auth/*",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/auth",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/auth/*",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/auth",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/auth/*",
+      "method": "PUT",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/auth",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/auth/*",
+      "method": "DELETE",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/auth",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/vendors/*",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/vendors",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/vendors/*",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/vendors",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/vendors/*",
+      "method": "PUT",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/vendors",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/vendors/*",
+      "method": "DELETE",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/vendors",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/products/*",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/products",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/products/*",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/products",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/products/*",
+      "method": "PUT",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/products",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/products/*",
+      "method": "DELETE",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/products",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/kyc/*",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/kyc",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/kyc/*",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/kyc",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/kyc/*",
+      "method": "PUT",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/kyc",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/kyc/*",
+      "method": "DELETE",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/kyc",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/favorites/*",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/favorites",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/favorites/*",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/favorites",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/favorites/*",
+      "method": "PUT",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/favorites",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/favorites/*",
+      "method": "DELETE",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/favorites",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/loyalty/*",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/loyalty",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/loyalty/*",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/loyalty",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/loyalty/*",
+      "method": "PUT",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/loyalty",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/loyalty/*",
+      "method": "DELETE",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/loyalty",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/reviews/*",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/reviews",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/reviews/*",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/reviews",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/reviews/*",
+      "method": "PUT",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/reviews",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/reviews/*",
+      "method": "DELETE",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/reviews",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/promotions/*",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/promotions",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/promotions/*",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/promotions",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/promotions/*",
+      "method": "PUT",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/promotions",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/promotions/*",
+      "method": "DELETE",
+      "output_encoding": "no-op",
+      "backend": [
+        {
+          "url_pattern": "/promotions",
+          "encoding": "no-op",
+          "host": [
+            "https://thola-devbuild-production.up.railway.app"
+          ]
         }
       ]
     }
